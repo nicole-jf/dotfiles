@@ -18,22 +18,19 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term footclient
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# runner options
 set $lines --list 10
 set $runner_flags --fn Terminus 9 $lines
+# menu variable is for runner with only PATH
 set $menu bemenu-run $runner_flags --prompt run
+# menud variable is for runner with only desktop entries
 set $menud j4-dmenu-desktop --dmenu="bemenu $runner_flags -i --prompt rund"
 #set $menud command ls $HOME/.local/share/applications/ | sed '/icons/d' | sed 's/.desktop$//' | bemenu -i $runner_flags --prompt rund
 
-# set $menu bemenu-run --fn Terminus 9 --prompt '' --list $lines
-# set $menud command ls $HOME/.local/share/applications/ | sed '/icons/d' | sed 's/.desktop$//' | bemenu -i --list $lines
-
-
-set $swaylock 'swaylock -f -c 000000'
-set $suspend 'systemctl suspend'
 
 include /etc/sway/config-vars.d/*
 
@@ -53,6 +50,8 @@ include /etc/sway/config-vars.d/*
 #
 # Example configuration:
 #
+set $swaylock 'swaylock -f -c 000000'
+set $suspend 'systemctl suspend'
 exec swayidle -w \
         timeout 300 $swaylock \
         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
@@ -242,10 +241,13 @@ bindsym $mod+r mode "resize"
 #        inactive_workspace #32323200 #32323200 #5c5c5c
 #    }
 #}
+
+# Set waybar as bar
 bar swaybar_command waybar
 
 include /etc/sway/config.d/*
 
+# Input configuration
 input "type:keyboard" {
     xkb_layout br
     xkb_variant nodeadkeys
@@ -263,6 +265,7 @@ input "type:mouse" {
 
 }
 
+# Apperance configuration
 font Terminus 8
 titlebar_border_thickness 0
 titlebar_padding 0
@@ -270,15 +273,11 @@ default_border normal 1
 
 hide_edge_borders --i3 both smart
 
-exec foot --server
 
-workspace 10
-exec keepassxc ~/Desktop/secretservice.kdbx
-workspace back_and_forth
-
+# Floating rules
 for_window [title="KeePassXC -  Access Request"] floating enable
+for_window [title="Unlock Database - KeePassXC"] floating enable
 for_window [title="Volume Control"] floating enable
-
 # Note THAT IS NOT A - BUT IT LOOKS LIKE ONE
 for_window [title="Settings — NeoChat"] floating enable
 for_window [title="Copying — Dolphin"] floating enable
@@ -286,15 +285,26 @@ for_window [title="Picture-in-Picture"] floating enable
 for_window [title="Ready to take a screenshot — Spectacle"] floating enable
 
 
+# Auto starts
 # Notification Daemon
 exec swaync
+# foot terminal deamon
+exec foot --server
+# Start KeePassXC in workspace 10 and return to previous starting workspace
+workspace 10
+exec keepassxc ~/Desktop/secretservice.kdbx
+workspace back_and_forth
 
 
+# Custom bindings
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
 
-# pavucontrol
-bindsym $mod+p exec pavucontrol
+# pavucontrol for audio volume management
+bindsym $mod+Shift+a exec pavucontrol
 
 # screenshots
 bindsym Print exec ~/.local/bin/sway-interactive-screenshot
+bindsym $mod+n workspace next_on_output
+bindsym $mod+p workspace prev_on_output
+bindsym $mod+Tab workspace back_and_forth
