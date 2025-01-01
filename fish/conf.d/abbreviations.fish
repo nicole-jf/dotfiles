@@ -21,3 +21,8 @@ abbr --add ed --position command "editor"
 
 # Tethering
 abbr --add tether "sudo ifconfig -a | grep -P -o -- 'enx[[:xdigit:]]*(?=:)' | sudo dhclient"
+
+# zoxide
+abbr -a za 'zoxide add'
+abbr -a zq 'zoxide query'
+abbr -a zqi 'zoxide query -i'

@@ -16,11 +16,11 @@ if status is-interactive
     # $HOME/.config/fish/conf.d/abbreviations.fish
 
     # Check if tmux is availible and if not already in tmux
-    if test -z "$TMUX"
-        and type -q "tmux"
-        # Attach session 0 if it exists, else create it
-        command tmux new-session -A -s 1
-    end
+    #    if test -z "$TMUX"
+    #        and type -q "tmux"
+    #        # Attach session 0 if it exists, else create it
+    #        command tmux new-session -A -s 1
+    #    end
     if test -n "$SWAYSOCK"
         set -x XDG_CURRENT_DESKTOP sway
     end
