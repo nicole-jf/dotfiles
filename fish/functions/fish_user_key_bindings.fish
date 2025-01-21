@@ -53,7 +53,7 @@ function fish_user_key_bindings
     bind -M replace-one \e\c] backward-jump
 
     # My custom rebind
-    bind --erase --preset -M insert \cv
-    bind --erase --preset -M visual \cv
-    bind -M insert \cV 'echo; fish_key_reader -V; commandline -f repaint'
+    #    bind --erase --preset -M insert \cv
+    #    bind --erase --preset -M visual \cv
+    #    bind -M insert \cV 'echo; fish_key_reader -V; commandline -f repaint'
 end
