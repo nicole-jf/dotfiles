@@ -283,7 +283,7 @@ for_window [title="Settings — NeoChat"] floating enable
 for_window [title="Copying — Dolphin"] floating enable
 for_window [title="Picture-in-Picture"] floating enable
 for_window [title="Ready to take a screenshot — Spectacle"] floating enable
-
+for_window [title="gomuks web - Mozila Firefox"] fullscreen disable
 
 # Auto starts
 # Notification Daemon
