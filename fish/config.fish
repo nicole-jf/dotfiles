@@ -1,8 +1,8 @@
 #!/bin/fish
 if status is-interactive
-    fish_add_path ~/.local/bin/
+#    fish_add_path ~/.local/bin/
     # Commands to run in interactive sessions can go here
-    fish_add_path  ~/.config/emacs/bin/
+#    fish_add_path  ~/.config/emacs/bin/
 
     # Source aliases
     source $__fish_config_dir/aliases.fish

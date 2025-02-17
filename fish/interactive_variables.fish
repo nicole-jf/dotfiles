@@ -14,7 +14,7 @@ if type -q pager
    set -x MANPAGER pager
 end
 
-set -x LESS "--mouse --use-color --wheel-lines=3"
+set -x LESS "--mouse --use-color -N --wheel-lines=3"
 
 # Set hybrid key bindings
 set -x fish_key_bindings fish_hybrid_key_bindings
