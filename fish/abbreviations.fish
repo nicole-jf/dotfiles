@@ -1,5 +1,5 @@
 #!/bin/fish
-abbr --add update "sudo apt update && apt list --upgradable && sudo apt upgrade && flatpak update"
+abbr --add update "sudo apt update && sudo apt upgrade && flatpak update"
 
 abbr --add qemu-network-fix "sudo virsh net-start default"
 
@@ -9,7 +9,6 @@ abbr --add ! -r "^\!(-?\d+(:(-?\d+\.\.-?\d+|\.\.-?\d+|-?\d+\.\.|-?\d+)?)?|\!(:(-
 
 # ... to ../..
 abbr --add .. --regex '^\.\.+$' --position command --function multicd
-
 
 # Abbreviation to activate python virtual enviroment
 abbr --add pyactivate --position command "source ./*/bin/activate.fish"

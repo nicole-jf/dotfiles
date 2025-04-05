@@ -1,0 +1,21 @@
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
+nvim/lazy-lock.json
+emacs/elpa/*
+emacs/elpa/
+emacs/elpa
+emacs/eln-cache/*
+emacs/eln-cache/
+emacs/eln-cache
+emacs/auto-save-list/*
+emacs/auto-save-list/
+emacs/auto-save-list
+emacs/url/*
+emacs/url/
+emacs/url
+emacs/history
+emacs/recentf
+emacs/places
+emacs/projectile-bookmarks.eld
+emacs/init.el~
+emacs/custom.el~

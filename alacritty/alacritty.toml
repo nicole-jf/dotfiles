@@ -1,0 +1,35 @@
+[font]
+normal = { family = "Terminus", style = "Regular"}
+bold = { family = "Terminus", style = "Bold"}
+italic = { family = "Terminus", style = "Regular"}
+bold_italic = { family = "Terminus", style = "Bold"}
+builtin_box_drawing = false
+size = 12
+[terminal]
+# Start sh as a login shell
+shell = { program = "/bin/sh", args = ["-l",] }
+[colors.primary]
+foreground = "#dcdcdc"
+background = "#0f0f0f"
+
+[colors.normal]
+# Normal/regular colors (color palette 0-7)
+black = "#111111"  # black
+red = "#DF4444"  # red
+green = "#44DF44"  # green
+yellow = "#DFDF44"  # yellow
+blue = "#444DFD"  # blue
+magenta = "#DF44DF"  # magenta
+cyan = "#44DFDF"  # cyan
+white = "#DFDFDF"  # white
+
+[colors.bright]
+# Bright colors (color palette 8-15)
+black = "#434343"   # bright black
+red = "#EF1111"   # bright red
+green = "#11EF11"   # bright green
+yellow = "#EFEF11"   # bright yellow
+blue = "#111EFE"   # bright blue
+magenta = "#EF11EF"   # bright magenta
+cyan = "#11FEFE"   # bright cyan
+white = "#FEFEFE"   # bright white

@@ -1,0 +1,17 @@
+.stow-local-ignore
+stow.sh
+test
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
+^/README*
+^/README.*
+^/LICENSE*
+^/LICENSE.*
+^/COPYING*
+^/COPYING.*
+\.git
+\.gitignore
+\.gitmodules
+\.svn
+_darcs
+\.hg
