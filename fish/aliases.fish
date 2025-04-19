@@ -1,5 +1,6 @@
 #!/usr/bin/env fish
 
+alias man="MANWIDTH=(math '$COLUMNS - 7') command man"
 # Aliases
 # alias less="less -r --use-color --mouse"
 if type -q nvim
@@ -10,18 +11,18 @@ end
 if type -q eza
    alias la='eza -aF'
    alias ls='eza -F'
-   alias ll='eza -lF --time-style=long-iso --group --color-scale  --header'
-   alias lla='eza -lF --all --time-style=long-iso --group --color-scale  --header'
+   alias ll='eza -blF --time-style=long-iso --group --color-scale --git --header'
+   alias lla='eza -blF --all --time-style=long-iso --group --color-scale --git --header'
 else if type -q exa
-   alias la='exa -aF --icons'
-   alias ls='exa -F --icons'
-   alias ll='exa -lF --time-style=long-iso --group --color-scale  --header'
-   alias lla='exa -lF --all --time-style=long-iso --group --color-scale  --header'
+   alias la='exa -aF'
+   alias ls='exa -F'
+   alias ll='exa -lF --time-style=long-iso --group --color-scale --git --header'
+   alias lla='exa -lF --all --time-style=long-iso --group --color-scale --git --header'
 else
     alias la='ls -aF --color=auto'
     alias ls='ls -aF --color=auto'
-    alias ll='ls -lF --color=auto'
-    alias lla='ls -alF --color=auto'
+    alias ll='ls -hlF --color=auto'
+    alias lla='ls -halF --color=auto'
 end
 
 alias grep='grep --color=auto'

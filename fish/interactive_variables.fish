@@ -15,6 +15,7 @@ end
 #end
 
 set -x LESS "--mouse --use-color -N -R --wheel-lines=3"
+set MANWIDTH (math "$COLUMNS - 7") # This is needed because less line numbers adds padding
 
 # Set hybrid key bindings
 set -x fish_key_bindings fish_hybrid_key_bindings
