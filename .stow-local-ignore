@@ -3,6 +3,7 @@ stow.sh
 test
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files
+\.\#.*       # emacs autosave files
 ^/README*
 ^/README.*
 ^/LICENSE*
