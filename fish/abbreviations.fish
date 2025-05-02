@@ -5,7 +5,6 @@ abbr --add qemu-network-fix "sudo virsh net-start default"
 
 # History expansion
 abbr --add ! -r "^!.*" --position anywhere --function history_abbreviation
-#abbr --add ! -r "^\!(-?\d+(:(-?\d+\.\.-?\d+|\.\.-?\d+|-?\d+\.\.|-?\d+)?)?|\!(:(-?\d+\.\.-?\d+|\.\.-?\d+|-?\d+\.\.|-?\d+?)?)?|:(-?\d+\.\.-?\d+|\.\.-?\d+|-?\d+\.\.|-?\d+)?)" --position anywhere --function history_expansion
 # ~/.config/fish/functions/history_expansion.fish
 
 # ... to ../..
