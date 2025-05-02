@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+# this file is called from $HOME/.profile in login sessions only (or at least should)
+#if [ -z "$ZELLIJ" ] && [ -z "$TMUX" ] && [ -z "$VIM" ] && [ -z "$INSIDE_EMACS" ] && [ -z "$NVIM" ] && [ "$TERM" != screen ]; then
+#    exec /home/user/.cargo/bin/zellij
+#else
+#    exec fish
+#fi

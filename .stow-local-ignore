@@ -1,5 +1,8 @@
 .stow-local-ignore
 stow.sh
+home
+home/
+home/*
 test
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files
