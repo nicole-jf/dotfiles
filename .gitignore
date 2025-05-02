@@ -20,3 +20,5 @@ emacs/places
 emacs/projectile-bookmarks.eld
 emacs/init.el~
 emacs/custom.el~
+emacs/tree-sitter
+emacs/.lsp*

@@ -21,6 +21,7 @@
 (global-set-key (kbd "C-w") #'kill-region-or-backward-word)
 (global-set-key (kbd "") 'scroll-up-line)
 (global-set-key (kbd "") 'scroll-down-line)
+(setq use-package-compute-statistics t)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
