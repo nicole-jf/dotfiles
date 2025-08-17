@@ -1,5 +1,5 @@
 #!/bin/fish
-abbr --add update "sudo apt update && sudo apt upgrade && flatpak update"
+abbr --add update "sudo apt --update upgrade && flatpak update"
 
 abbr --add qemu-network-fix "sudo virsh net-start default"
 

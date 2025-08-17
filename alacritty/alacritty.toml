@@ -1,13 +1,13 @@
 [font]
-normal = { family = "Terminus", style = "Regular"}
-bold = { family = "Terminus", style = "Bold"}
-italic = { family = "Terminus", style = "Regular"}
-bold_italic = { family = "Terminus", style = "Bold"}
+normal = {family = "Terminus", style = "Regular"}
+bold = {family = "Terminus", style = "Bold"}
+italic = {family = "Terminus", style = "Regular"}
+bold_italic = {family = "Terminus", style = "Bold"}
 builtin_box_drawing = false
 size = 12
 [terminal]
 # Start sh as a login shell
-shell = { program = "/bin/sh", args = ["-l",] }
+shell = {program = "/bin/sh", args = ["-l",]}
 [colors.primary]
 foreground = "#dcdcdc"
 background = "#0f0f0f"
@@ -33,3 +33,10 @@ blue = "#111EFE"   # bright blue
 magenta = "#EF11EF"   # bright magenta
 cyan = "#11FEFE"   # bright cyan
 white = "#FEFEFE"   # bright white
+
+[keyboard]
+bindings = [
+    {key = "Insert", mods = "Shift", action = "Paste"},   # Paste clipboard instead of the default of pasting the selection
+    {key = "Insert", mods = "Control", action = "ReceiveChar"}, # Pass it the process running
+]
+

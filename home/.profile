@@ -1,6 +1,5 @@
 #!/bin/sh
 # ~/.profile: executed by the command interpreter for login shells.
-# I believe the above line to be wrong, it is sourced by all interactive sh sessions it seems, and probably non interactive on too
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
 # exists.
 # see /usr/share/doc/bash/examples/startup-files for examples.

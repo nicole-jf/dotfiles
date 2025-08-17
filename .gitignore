@@ -22,3 +22,6 @@ emacs/init.el~
 emacs/custom.el~
 emacs/tree-sitter
 emacs/.lsp*
+emacs/tramp
+emacs/eshell
+emacs/transient
