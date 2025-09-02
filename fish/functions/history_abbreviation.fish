@@ -1,5 +1,5 @@
 function history_abbreviation
-    set --local indexes ($HOME/.local/bin/parser decode $argv)
+    set --local indexes ($__fish_config_dir/functions/fish_history_abbreviation $argv)
     if test -z "$indexes"
         return 1
     end
@@ -12,4 +12,3 @@ function history_abbreviation
         echo $args
     end
 end
-

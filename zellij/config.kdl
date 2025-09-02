@@ -352,7 +352,7 @@ pane_frames false
 //   - system (default)
 //   - primary
 // 
-copy_clipboard "system"
+copy_clipboard "primary"
  
 // Enable automatic copying (and clearing) of selection when releasing mouse
 // Default: true

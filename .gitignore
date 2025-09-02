@@ -25,3 +25,4 @@ emacs/.lsp*
 emacs/tramp
 emacs/eshell
 emacs/transient
+helix/runtime

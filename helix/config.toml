@@ -1,7 +1,11 @@
 theme= "onedark"
+
 [editor]
 line-number = "relative"
-mouse = false
+mouse = true
+default-yank-register = '"'
+color-modes = true
+clipboard-provider = "termcode"
 
 [editor.cursor-shape]
 insert = "bar"
