@@ -35,15 +35,19 @@ if [ -d "$HOME/.cargo/env" ] ; then
     . "$HOME/.cargo/env"
 fi
 
+# add python pipx packages
+ if [ -d "$HOME/.local/share/pipx/venvs" ] ; then
+    . "$HOME/.local/share/pipx/venvs"
+fi
 # if shell is sh (probably dash or ash) export .shrc as ENV, ENV gets sourced by login shells only (shells started at the VT or manually specified with -l)
 #if [ $(ps -p $$ -o comm=) = "sh" ]; then
 #    ENV=$HOME/.shrc; export ENV
 #fi
 
 # Fix GTK apps not using my font for whatever reason
-gsettings set org.gnome.desktop.interface font-name 'Terminus 11' &
-gsettings set org.gnome.desktop.interface documet-font-name 'Terminus 11' &
-gsettings set org.gnome.desktop.interface monospace-font-name 'Terminus 11' &
+# gsettings set org.gnome.desktop.interface font-name 'Terminus 11' &
+# gsettings set org.gnome.desktop.interface documet-font-name 'Terminus 11' &
+# gsettings set org.gnome.desktop.interface monospace-font-name 'Terminus 11' &
 
 # If shell is interactive do this
 case $- in
@@ -55,4 +59,8 @@ case $- in
         fi
     ;;
 esac
-
+# export QSG_RHI_BACKEND=vulkan
+# export QSG_RENDER_LOOP=threaded
+# export QT_QPA_PLATFORM=wayland
+# export KWIN_USE_OVERLAYS=1 
+# export LANG=C

@@ -1,4 +1,4 @@
-theme= "onedark"
+theme = "onedarker"
 
 [editor]
 line-number = "relative"
@@ -7,7 +7,35 @@ default-yank-register = '"'
 color-modes = true
 clipboard-provider = "termcode"
 
+[editor.lsp]
+display-inlay-hints = true
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[editor.file-picker]
+git-ignore = true
+hidden = false
+
+[keys.insert]
+C-e = "goto_line_end_newline"
+C-a = "goto_first_nonwhitespace"
+A-b = "move_prev_word_start"
+A-f = "move_next_word_end"
+C-f = "move_char_right"
+C-b = "move_char_left"
+
+
+[keys.normal]
+C-e = "goto_line_end_newline"
+C-a = "goto_first_nonwhitespace"
+C-k = "kill_to_line_end"
+C-S-k = "@xd"
+A-b = "move_prev_word_start"
+A-f = "move_next_word_end"
+
+[keys.select]
+C-e = "goto_line_end_newline"
+C-a = "goto_first_nonwhitespace"

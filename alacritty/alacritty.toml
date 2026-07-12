@@ -4,24 +4,35 @@ bold = {family = "Terminus", style = "Bold"}
 italic = {family = "Terminus", style = "Regular"}
 bold_italic = {family = "Terminus", style = "Bold"}
 builtin_box_drawing = false
-size = 12
-[terminal]
+size = 9
+# [terminal]
 # Start sh as a login shell
-shell = {program = "/bin/sh", args = ["-l",]}
+# shell = {program = "/bin/sh", args = ["-l",]}
 [colors.primary]
 foreground = "#dcdcdc"
 background = "#0f0f0f"
 
 [colors.normal]
 # Normal/regular colors (color palette 0-7)
+# oklch L ~~0.7502~~ 0.762 C ~~0.1275~~ 0.1361
 black = "#111111"  # black
-red = "#DF4444"  # red
-green = "#44DF44"  # green
-yellow = "#DFDF44"  # yellow
-blue = "#444DFD"  # blue
-magenta = "#DF44DF"  # magenta
-cyan = "#44DFDF"  # cyan
+red = "#f78bae"  # red 0
+green = "#a7be53"  # green 120
+yellow = "#f09b50"  # yellow 60
+blue = "#53bcff" # blue 240
+magenta = "#bf9dfb"  # magenta 300
+cyan = "#13cdb5"  # cyan 180
 white = "#DFDFDF"  # white
+# [colors.normal]
+# # Normal/regular colors (color palette 0-7)
+# black = "#111111"  # black
+# red = "#DF4444"  # red
+# green = "#44DF44"  # green
+# yellow = "#DFDF44"  # yellow
+# blue = "#444DFD"  # blue
+# magenta = "#DF44DF"  # magenta
+# cyan = "#44DFDF"  # cyan
+# white = "#DFDFDF"  # white
 
 [colors.bright]
 # Bright colors (color palette 8-15)
@@ -36,7 +47,7 @@ white = "#FEFEFE"   # bright white
 
 [keyboard]
 bindings = [
-    {key = "Insert", mods = "Shift", action = "Paste"},   # Paste clipboard instead of the default of pasting the selection
+    {key = "Insert", mods = "Shift", action = "Paste"},         # Paste clipboard instead of the default of pasting the selection
     {key = "Insert", mods = "Control", action = "ReceiveChar"}, # Pass it the process running
 ]
 

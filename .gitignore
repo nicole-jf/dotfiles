@@ -1,28 +1,25 @@
-.+~          # emacs backup files
-\#.*\#       # emacs autosave files
-\.\#.*       # emacs autosave files
+# emacs backup files
+*~
+
+# emacs autosave files
+\#*#
+
+# emacs undo tree files
+*.~undo-tree~
+
 nvim/lazy-lock.json
-emacs/elpa/*
-emacs/elpa/
-emacs/elpa
-emacs/eln-cache/*
-emacs/eln-cache/
-emacs/eln-cache
-emacs/auto-save-list/*
-emacs/auto-save-list/
-emacs/auto-save-list
-emacs/url/*
-emacs/url/
-emacs/url
+emacs/elpa/**
+emacs/eln-cache/**
+emacs/auto-save-list/**
+emacs/url/**
 emacs/history
 emacs/recentf
 emacs/places
 emacs/projectile-bookmarks.eld
-emacs/init.el~
-emacs/custom.el~
 emacs/tree-sitter
 emacs/.lsp*
 emacs/tramp
 emacs/eshell
 emacs/transient
+emacs/custom.el
 helix/runtime

@@ -1,17 +1,17 @@
 #!/bin/fish
 function fish_user_key_bindings
     #fish_hybrid_key_bindings # /usr/share/fish/functions/fish_hybrid_key_bindings.fish
-    # Hybrid key bindings set in ~/.config/fish/conf.d/variables.fish
-    # default mode is normal mode
+    # Hybrid key bindings have been set in ~/.config/fish/conf.d/variables.fish instead
 
+    bind -M insert ctrl-z fg
     # Insert key to toggle between insert and replace mode
     bind -M insert -m replace insert repaint-mode
     bind -M replace -m insert insert repaint-mode
     bind -M replace_one -m insert insert repaint-mode
     # Insert key to start insert mode from normal mode
-    bind -M default -m insert -k ic repaint-mode
-    
-    # Some keybinds seem to be missing of replace and replace_one mode
+    bind -M default -m insert insert repaint-mode
+
+    # Some emacs keybinds seem to be missing in replace and replace_one mode
     bind -M replace left backward-char # <Left arrow> to move cursor left
     bind -M replace right forward-char # <Right arrow> to move cursor right
     bind -M replace ctrl-left backward-word # <Left arrow>-<Control> to move cursor one word left

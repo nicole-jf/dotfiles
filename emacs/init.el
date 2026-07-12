@@ -37,7 +37,10 @@
         ("nongnu" . 20)
         ("melpa-stable" . 10)
         ("melpa" . 0)))
+
 (package-initialize)
+(add-to-list 'default-frame-alist
+             '(font . "Terminus-9"))
 (use-package undo-tree
   :ensure t
   :config (global-undo-tree-mode t))

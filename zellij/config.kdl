@@ -298,7 +298,7 @@ default_shell "fish"
 //   - true (default)
 //   - false
 // 
-// mouse_mode false
+mouse_mode true
  
 // Toggle having pane frames around the panes
 // Options:
@@ -352,7 +352,7 @@ pane_frames false
 //   - system (default)
 //   - primary
 // 
-copy_clipboard "primary"
+copy_clipboard "system"
  
 // Enable automatic copying (and clearing) of selection when releasing mouse
 // Default: true
