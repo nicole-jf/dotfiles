@@ -9,11 +9,11 @@ end
 
 # Enable color support of ls and also add handy aliases
 if type -q eza
-    alias la='eza -aF --icons'
-    alias ls='eza -F --icons'
-    alias ll='eza -blF --time-style=long-iso --group --color-scale --git --header --icons'
-    alias lla='eza -blF --all --time-style=long-iso --group --color-scale --git --header --icons'
-    alias lal='eza -blF --all --time-style=long-iso --group --color-scale --git --header --icons'
+    alias la='eza -aF --icons=auto'
+    alias ls='eza -F --icons=auto'
+    alias ll='eza -blF --time-style=long-iso --group --color-scale --git --header --icons=auto'
+    alias lla='eza -blF --all --time-style=long-iso --group --color-scale --git --header --icons=auto'
+    alias lal='eza -blF --all --time-style=long-iso --group --color-scale --git --header --icons=auto'
 else if type -q exa
     alias la='exa -aF'
     alias ls='exa -F'

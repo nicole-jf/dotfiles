@@ -7,6 +7,9 @@
 # emacs undo tree files
 *.~undo-tree~
 
+# emacs lisp data files
+*.eld
+
 nvim/lazy-lock.json
 emacs/elpa/**
 emacs/eln-cache/**
@@ -15,7 +18,6 @@ emacs/url/**
 emacs/history
 emacs/recentf
 emacs/places
-emacs/projectile-bookmarks.eld
 emacs/tree-sitter
 emacs/.lsp*
 emacs/tramp

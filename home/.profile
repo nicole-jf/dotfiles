@@ -16,11 +16,18 @@ if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
     . "$HOME/.bashrc"
     fi
+    if [ -n "$XDG_CONFIG_DIRS" ]; then
+        export HISTFILE=$XDG_CONFIG_DIRS/bash/bash_history
+    fi
 fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/.bin" ] ; then
+    PATH="$HOME/.bin:$PATH"
 fi
 
 # set PATH so it includes user's private bin if it exists
@@ -39,6 +46,7 @@ fi
  if [ -d "$HOME/.local/share/pipx/venvs" ] ; then
     . "$HOME/.local/share/pipx/venvs"
 fi
+
 # if shell is sh (probably dash or ash) export .shrc as ENV, ENV gets sourced by login shells only (shells started at the VT or manually specified with -l)
 #if [ $(ps -p $$ -o comm=) = "sh" ]; then
 #    ENV=$HOME/.shrc; export ENV

@@ -55,6 +55,9 @@
   :ensure t)
 (use-package company
   :ensure t)
+(use-package magit
+  :ensure t)
+
 (require 'lsp-mode)
 (add-hook 'rust-ts-mode-hook #'lsp-deferred)
 (add-hook 'rust-mode-hook #'lsp-deferred)

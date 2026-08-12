@@ -26,7 +26,7 @@ set fish_prompt_pwd_dir_length 0
 # My own variable to toggle mode prompt indicator
 set -x fish_show_mode_prompt 0
 
-set fish_escape_delay_ms 5
+set fish_escape_delay_ms 10
 
 # Cursor setttings
 # Emulates nvim's cursor shape behavior

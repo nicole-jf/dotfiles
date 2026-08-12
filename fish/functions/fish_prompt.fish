@@ -30,7 +30,7 @@ function fish_prompt -d "Write out the prompt"
     # alfa@nobby /path/to/dir >
     # with the path shortened and colored
     # and a "#" instead of a ">" when run as root.
-    set -l symbol '>'
+    set -l symbol ">"
     set -l color_cwd $fish_color_cwd
     if functions -q fish_is_root_user; and fish_is_root_user # Checks if user is root
         set symbol '#'
@@ -39,5 +39,9 @@ function fish_prompt -d "Write out the prompt"
         end
     end
 
-    string join '' -- (prompt_login) " " (set_color $color_cwd) (prompt_pwd) (set_color normal) (fish_vcs_prompt) $last_job $prompt_status (set_color normal) $symbol
+    if test "$my_fish_parent_command" = fish
+        set nested (set_color yellow)"[under fish]"(set_color normal)
+    end
+
+    string join '' -- $nested (prompt_login) " " (set_color $color_cwd) (prompt_pwd) (set_color normal) (fish_vcs_prompt) $last_job $prompt_status (set_color normal) $symbol
 end
